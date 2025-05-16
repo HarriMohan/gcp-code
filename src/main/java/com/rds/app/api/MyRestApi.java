@@ -14,7 +14,13 @@ public class MyRestApi {
                        "status", "success",
                 "timestamp", String.valueOf(System.currentTimeMillis()),
                 "version", "1.0.0",
-                "description", "Sample REST API");
+                "author", "Ramanuj Das");
+    }
+
+    @GetMapping("/health")
+    public Map<String, String> health() {
+        return Map.of("status", "UP",
+                "timestamp", String.valueOf(System.currentTimeMillis()));
     }
 
 
